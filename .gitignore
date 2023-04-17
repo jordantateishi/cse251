@@ -1,0 +1,10 @@
+**/code*.py
+.vscode/*
+**/attendance.png
+**/__pycache__
+**/elephant
+**/green
+**/processed
+**/*.task
+**/*.class
+**/prove

@@ -42,12 +42,21 @@ class Deck:
 
 
     def reshuffle(self):
-        # TODO - add call to reshuffle
-        pass
+        
+        reshuffle = f'https://deckofcardsapi.com/api/deck/{self.id}/shuffle/'
+        t = Request_thread(reshuffle)
+        t.start()
+        t.join()
+        return t.response
 
     def draw_card(self):
-        # TODO add call to get a card
-        pass
+
+        draw = f'https://deckofcardsapi.com/api/deck/{self.id}/draw/'
+        t = Request_thread(draw)
+        t.start()
+        t.join()
+        self.remaining -= 1
+        return t.response["cards"][0]["code"]
 
     def cards_remaining(self):
         return self.remaining
@@ -66,7 +75,7 @@ if __name__ == '__main__':
     #        team_get_deck_id.py program once. You can have
     #        multiple decks if you need them
 
-    deck_id = 'ENTER ID HERE'
+    deck_id = '1eoh3lzpw5yz'
 
     # Test Code >>>>>
     deck = Deck(deck_id)

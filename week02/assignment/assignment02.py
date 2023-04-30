@@ -50,6 +50,27 @@ numbers_processed = 0
 
 NUMBER_THREADS = 10
 
+def primes(numbers: int):
+    global prime_count
+    global numbers_processed
+    for i in range(numbers):
+        numbers_processed += 1
+        if is_prime(i):
+            prime_count += 1
+
+def partition(NUMBER_THREADS: int, start: int, num_range: int):
+    num_partition = (start+num_range) // NUMBER_THREADS
+    last_num_partition = num_partition + ((start+num_range) % NUMBER_THREADS)
+    list_partition = []
+    count = 1
+    for i in range(num_partition):
+        if count < NUMBER_THREADS-1:
+            list_partition.append(count*num_partition)
+            count+=1
+    for i in range(((start+num_range) - last_num_partition), (start+num_range)):
+        list_partition.append(i)
+    return list_partition
+
 def is_prime(n: int):
     """
     Primality test using 6k+-1 optimization.
@@ -82,6 +103,23 @@ if __name__ == '__main__':
     begin_time = time.perf_counter()
 
     # TODO write code here
+    start = 10000000000
+    num_range = 110003
+
+    list_partition = partition(NUMBER_THREADS, start, num_range)
+
+    threads=[]
+    i = 0
+    while i < NUMBER_THREADS:
+        t = threading.Thread(target=primes, args=list_partition[i])
+        threads.append(t)
+        t.start()
+        i+=1
+    
+    for t in threads:
+        t.join()
+
+
    
     # Use the below code to check and print your results
     assert numbers_processed == 110_003, f"Should check exactly 110,003 numbers but checked {numbers_processed}"

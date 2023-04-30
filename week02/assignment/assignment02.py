@@ -1,42 +1,3 @@
-'''
-Requirements
-1. Write a multithreaded program that counts the number of prime numbers 
-   between 10,000,000,000 and 10,000,110,003.
-2. The program should be able to use a variable amount of threads.
-3. Each thread should look over an approximately equal number of numbers.
-   This means that you need to devise an algorithm that can divide up the
-   110,003 numbers "fairly" based on a variable number of threads. 
-   
-Psuedocode: 
-1. Create variable for the start number (10_000_000_000)
-2. Create variable for range of numbers to examine (110_003)
-3. Create variable for number of threads (start with 1 to get your program running,
-   then increase to 5, then 10).
-4. Determine an algorithm to partition the 110,003 numbers based on 
-    the number of threads. Each thread should have approx. the same amount
-    of numbers to examine. For example, if the number of threads is
-    5, then the first 4 threads will examine 22,000 numbers, and the
-    last thread will examine 22,003 numbers. Determine the start and
-    end values of each partition.
-5. Use these start and end values as arguments to a function.
-6. Use a thread to call this function.
-7. Create a function that loops from a start and end value, and checks
-   if the value is prime using the isPrime function. Use the globals
-   to keep track of the total numbers examined and the number of primes
-   found. 
-
-Questions:
-1. Time to run using 1 thread =
-2. Time to run using 5 threads =
-3. Time to run using 10 threads =
-4. Based on your study of the GIL (see https://realpython.com/python-gil), 
-   what conclusions can you draw about the similarity of the times (short answer)?
-   >
-   >
-5. Is this assignment an IO Bound or CPU Bound problem (see https://stackoverflow.com/questions/868568/what-do-the-terms-cpu-bound-and-i-o-bound-mean)?
-   >
-'''
-
 from datetime import datetime, timedelta
 import math
 import threading
@@ -50,25 +11,33 @@ numbers_processed = 0
 
 NUMBER_THREADS = 10
 
-def primes(numbers: int):
+def primes(start, end):
     global prime_count
     global numbers_processed
-    for i in range(numbers):
+
+    for i in range(start, end):
         numbers_processed += 1
+
+        # Check if the numbers within the range are prime
         if is_prime(i):
             prime_count += 1
 
 def partition(NUMBER_THREADS: int, start: int, num_range: int):
-    num_partition = (start+num_range) // NUMBER_THREADS
-    last_num_partition = num_partition + ((start+num_range) % NUMBER_THREADS)
+    # Calculate the partitions by dividing. The last partition will take the remainder
+    num_partition = num_range // NUMBER_THREADS
+    last_num_partition = num_range % NUMBER_THREADS
+
     list_partition = []
-    count = 1
-    for i in range(num_partition):
-        if count < NUMBER_THREADS-1:
-            list_partition.append(count*num_partition)
-            count+=1
-    for i in range(((start+num_range) - last_num_partition), (start+num_range)):
-        list_partition.append(i)
+    count = 0
+    for i in range(NUMBER_THREADS):
+        if count < last_num_partition:
+            count += 1
+            end = start + num_partition + 1
+        else:
+            end = start + num_partition
+        list_partition.append((start, end))
+        start = end
+    # return a list will all the partitioned numbers
     return list_partition
 
 def is_prime(n: int):
@@ -108,19 +77,17 @@ if __name__ == '__main__':
 
     list_partition = partition(NUMBER_THREADS, start, num_range)
 
+    # Create a list to store the threads
     threads=[]
-    i = 0
-    while i < NUMBER_THREADS:
-        t = threading.Thread(target=primes, args=list_partition[i])
+
+    for i in list_partition:
+        t = threading.Thread(target=primes, args=i)
         threads.append(t)
         t.start()
-        i+=1
-    
+
     for t in threads:
         t.join()
 
-
-   
     # Use the below code to check and print your results
     assert numbers_processed == 110_003, f"Should check exactly 110,003 numbers but checked {numbers_processed}"
     assert prime_count == 4764, f"Should find exactly 4764 primes but found {prime_count}"

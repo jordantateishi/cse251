@@ -1,3 +1,20 @@
+'''
+Questions:
+1. Time to run using 1 thread = 9.81 sec
+2. Time to run using 5 threads = 10.07 sec
+3. Time to run using 10 threads = 10.25 sec
+4. Based on your study of the GIL (see https://realpython.com/python-gil), 
+   what conclusions can you draw about the similarity of the times (short answer)?
+   >
+   I can conclude that the GIL causes the run time of multi threaded applications to actually take longer. This is because the GIL only allows
+   one thread to hold control. Also, the acquire and release overheads added by the lock causes the increase in time so that is why we see 
+   an increase as more threads were added.
+   >
+5. Is this assignment an IO Bound or CPU Bound problem (see https://stackoverflow.com/questions/868568/what-do-the-terms-cpu-bound-and-i-o-bound-mean)?
+   >
+   This assignment was a CPU bound problem because it relied on the processing power of the CPU to determine how quickly it would execute.
+'''
+
 from datetime import datetime, timedelta
 import math
 import threading

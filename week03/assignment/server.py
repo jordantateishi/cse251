@@ -25,7 +25,7 @@ import time
 import json
 import os
 
-TOP_API_URL = 'http://127.0.0.1:8790'
+TOP_API_URL = r'http://127.0.0.1:8790'
 
 URL_PEOPLE    = "people"
 URL_PLANETS   = "planets"

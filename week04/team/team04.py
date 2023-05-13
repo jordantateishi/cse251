@@ -23,7 +23,7 @@ class Food:
         # Takes some time to prepare food
         time.sleep(random.random() / (SLEEP_REDUCE_FACTOR))
 
-        #print(f'putting {self.choice} on the table')
+        print(f'putting {self.choice} on the table')
 
     def __str__(self) -> str:
         return self.choice
@@ -61,6 +61,12 @@ class Feeder(threading.Thread):
         
         # TODO create necessary attributes on self so that they can be
         #      accessed in the run function
+        self.feeder_index = feeder_index
+        self.sem_mouth_full = sem_mouth_full
+        self.sem_can_I_eat = sem_can_I_eat
+        self.table_queue = table_queue
+        self.table_lock = table_lock
+        self.food_made = 0
 
     def run(self):
         # Loop over amount of food to make
@@ -68,13 +74,23 @@ class Feeder(threading.Thread):
             
             # TODO - use a semaphore to prevent putting too much food in queue (table)
             
+            self.sem_mouth_full.acquire()
+            
             # TODO - lock, put food on queue (table), increment food made counter, unlock
-            
+            self.table_lock.acquire()
+            self.table_queue.put(self.feeder_index)
+            self.food_made +=1
+            self.table_lock.release()
+
             # TODO - signal to eater that food has been placed on table
+            self.sem_can_I_eat.release()
             
-            pass # remove this
         
         # TODO - after adding all food, signal to eater that there is no more food
+        self.sem_mouth_full.acquire()
+        self.table_queue.put(None)
+        self.sem_can_I_eat.release()
+        
 
             
 
@@ -93,17 +109,32 @@ class Eater(threading.Thread):
         
         # TODO create necessary attributes on self so that they can be
         #      accessed in the run function
+        self.eater_index = eater_index
+        self.sem_mouth_full = sem_mouth_full
+        self.sem_can_I_eat = sem_can_I_eat
+        self.table_queue = table_queue
+        self.table_lock = table_lock
+        self.food_eaten = 0
 
     def run(self):
         while True:
             
             # TODO - using a semaphore, prevent removing item from an empty queue
+            self.sem_can_I_eat.acquire()
             
             # TODO - lock, get food from queue, and unlock
+            self.table_lock.acquire()
             
+            food = self.table_queue.get()
             # TODO - if item from queue is None, then break; else increment food ate counter
-            
+            if food == None:
+                break
+            else: 
+                self.food_eaten += 1
+            self.table_lock.release()
+
             # TODO - signal to feeder to put more food on table
+            self.sem_mouth_full.release()
 
             # Need some time to digest (leave this)
             time.sleep(random.random() / (SLEEP_REDUCE_FACTOR))

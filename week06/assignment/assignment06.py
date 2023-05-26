@@ -1,25 +1,24 @@
 '''
-Requirements
-1. Finish the team06 assignment (if necessary).
-2. Change your program to process all 300 images using 1 CPU, then 2 CPUs, all the way up to the
-   number of CPUs on your computer plus 4.
-3. Keep track of the time it takes to process all 300 images per CPU.
-4. Plot the time to process vs the number of CPUs.
-   
 Questions:
 1. What is the relationship between the time to process versus the number of CPUs?
    Does there appear to be an asymptote? If so, what do you think the asymptote is?
    >
+      The time to process exponentially decreases as the number of CPUs increase. It seems to steady out near the end when 
+      the CPU count for my machine is reached.
    >
 2. Is this a CPU bound or IO bound problem? Why?
    >
+      CPU bound problem because it relies on the CPUs of your computer to run and that determines what the results of the time will be
+      for the program.
    >
 3. Would threads work on this assignment? Why or why not? (guess if you need to) 
    >
+      I am going to guess and assume that threads would work on this assignment. This is because of what I have learned about threads so far.
+      Threads are able to work depending on how you set it up and execute. 
    >
 4. When you run "create_final_video.py", does it produce a video with the elephants
    inside of the screen?
-   >
+   > Yes, it does produce the video.
 '''
 
 from matplotlib.pylab import plt  # load plot library
@@ -31,9 +30,7 @@ import multiprocessing as mp
 # 4 more than the number of cpu's on your computer
 CPU_COUNT = mp.cpu_count() + 4  
 
-# TODO Your final video need to have 300 processed frames.  However, while you are 
-# testing your code, set this much lower
-FRAME_COUNT = 20
+FRAME_COUNT = 300
 
 RED   = 0
 GREEN = 1
@@ -61,9 +58,15 @@ def create_new_frame(image_file, green_file, process_file):
     image_new = Image.composite(image_img, green_img, mask_img)
     image_new.save(process_file)
 
+# this function processes each image and calling the create_new_frame function
+def process(num):
+   image_number = num
 
-# TODO add any functions you need here
+   image_file = rf'elephant/image{image_number:03d}.png'
+   green_file = rf'green/image{image_number:03d}.png'
+   process_file = rf'processed/image{image_number:03d}.png'
 
+   create_new_frame(image_file, green_file, process_file)
 
 
 if __name__ == '__main__':
@@ -74,16 +77,27 @@ if __name__ == '__main__':
     xaxis_cpus = []
     yaxis_times = []
 
-    # process the 10th frame (TODO modify this to loop over all frames)
-    image_number = 10
+   # set the cpu number to 1 so that we can start keeping track
+    cpu_number = 1
 
-    image_file = rf'elephant/image{image_number:03d}.png'
-    green_file = rf'green/image{image_number:03d}.png'
-    process_file = rf'processed/image{image_number:03d}.png'
+    # continue in a loop for each CPU count until it reaches the global CPU_COUNT variable
+    while cpu_number <= CPU_COUNT:
 
-    start_time = timeit.default_timer()
-    create_new_frame(image_file, green_file, process_file)
-    print(f'\nTime To Process all images = {timeit.default_timer() - start_time}')
+      start_time = timeit.default_timer()
+
+      # using processes here and the cpu_number variable for the counter
+      nums = [x for x in range(1, FRAME_COUNT +1)]
+      with mp.Pool(cpu_number) as p:
+         p.map(process, nums)
+
+      time_result = timeit.default_timer() - start_time
+      print(f'\nTime To Process all images with {cpu_number} cores = {time_result}')
+
+      # append the data for the plot
+      xaxis_cpus.append(cpu_number)
+      yaxis_times.append(time_result)
+
+      cpu_number += 1
 
     print(f'Total Time for ALL processing: {timeit.default_timer() - all_process_time}')
 

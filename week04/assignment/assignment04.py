@@ -84,12 +84,11 @@ class QueueTwoFiftyOne():
 class Manufacturer(threading.Thread):
     """ This is a manufacturer.  It will create cars and place them on the car queue """
 
-    def __init__(self, CARS_TO_PRODUCE, car_index, sem_dealership, sem_manufacturer, car_queue, my_lock, queue_stats):
+    def __init__(self, CARS_TO_PRODUCE, sem_dealership, sem_manufacturer, car_queue, my_lock, queue_stats):
 
         # call the super class's constructor
         threading.Thread.__init__(self)
 
-        self.car_index = car_index
         self.car_count = CARS_TO_PRODUCE
         self.sem_dealership = sem_dealership
         self.sem_manufacturer = sem_manufacturer
@@ -111,8 +110,9 @@ class Manufacturer(threading.Thread):
             # lock before dealing with the queue
             self.my_lock.acquire()
 
-            self.car_queue.put(self.car_index)
-            self.queue_stats[(self.car_queue.size()) - 1] += 1
+            car = Car()
+            self.car_queue.put(car)
+            #self.queue_stats[(self.car_queue.size()) - 1] += 1
 
             self.my_lock.release()
             
@@ -128,7 +128,7 @@ class Manufacturer(threading.Thread):
 class Dealership(threading.Thread):
     """ This is a dealership that receives cars """
 
-    def __init__(self, sem_dealership, sem_manufacturer, car_queue, my_lock):
+    def __init__(self, sem_dealership, sem_manufacturer, car_queue, my_lock, queue_stats):
 
         # call the super class's constructor
         threading.Thread.__init__(self)
@@ -137,6 +137,7 @@ class Dealership(threading.Thread):
         self.sem_manufacturer = sem_manufacturer
         self.car_queue = car_queue
         self.my_lock = my_lock
+        self.queue_stats = queue_stats
 
     def run(self):
         """
@@ -154,6 +155,8 @@ class Dealership(threading.Thread):
             car = self.car_queue.get()
             if car == None:
                 break
+
+            self.queue_stats[(self.car_queue.size())] += 1
 
             self.my_lock.release()
 
@@ -189,12 +192,10 @@ def main():
     queue_stats = [0] * MAX_QUEUE_SIZE
 
     # create your one manufacturer
-    car = Car()
-    car_index = car.model
-    manufacturer = Manufacturer(CARS_TO_PRODUCE, car_index, sem_dealership, sem_manufacturer, car_queue, my_lock, queue_stats)
+    manufacturer = Manufacturer(CARS_TO_PRODUCE, sem_dealership, sem_manufacturer, car_queue, my_lock, queue_stats)
 
     # create your one dealership
-    dealership = Dealership(sem_dealership, sem_manufacturer, car_queue, my_lock)
+    dealership = Dealership(sem_dealership, sem_manufacturer, car_queue, my_lock, queue_stats)
 
     # Start manufacturer and dealership
     manufacturer.start()

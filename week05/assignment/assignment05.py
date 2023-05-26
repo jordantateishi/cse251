@@ -1,24 +1,14 @@
 '''
-Requirements
-1. Using multiple threads, put cars onto a shared queue, with one or more thread consuming
-   the items from the queue and one or more thread producing the items.
-2. The size of queue should never exceed 10.
-3. Do not call queue size to determine if maximum size has been reached. This means
-   that you should not do something like this: 
-        if q.size() < 10:
-   Use the blocking semaphore function 'acquire'.
-4. Produce a Plot of car count vs queue size (okay to use q.size since this is not a
-   condition statement).
-5. The number of cars produced by the manufacturer must equal the number of cars bought by the 
-   dealership. Use necessary data objects (e.g., lists) to prove this. There is an assert in 
-   main that must be used.
-   
 Questions:
 1. How would you define a barrier in your own words?
    >
+        A barrier is what we use to have the program wait for the other threads before proceeding.
    >
 2. Why is a barrier necessary in this assignment?
    >
+        A barrier was necessary for this because I ran into problems with the dealership class. I needed to break the loop but if I did
+        so before the other threads could finish, it would fail. The barriers protected my program and prevented me from running
+        into deadlocks.
    >
 '''
 
@@ -61,7 +51,8 @@ class Car():
         self.display()
 
     def display(self):
-        print(f'{self.make} {self.model}, {self.year}')
+        #print(f'{self.make} {self.model}, {self.year}')
+        pass
 
 
 class QueueTwoFiftyOne():
@@ -86,31 +77,100 @@ class QueueTwoFiftyOne():
 class Manufacturer(threading.Thread):
     """ This is a manufacturer.  It will create cars and place them on the car queue """
 
-    def __init__(self):
-        self.cars_to_produce = random.randint(200, 300)     # Don't change
+    def __init__(self, manufacturer_id, sem_dealership, sem_manufacturer, car_queue, my_lock, barrier, manufacturer_stats, manufacturer_count, dealer_count):
+        threading.Thread.__init__(self)
+
+        self.cars_to_produce = random.randint(200, 300)
+        self.manufacturer_id = manufacturer_id
+        self.sem_dealership = sem_dealership
+        self.sem_manufacturer = sem_manufacturer
+        self.car_queue = car_queue
+        self.my_lock = my_lock
+        self.barrier = barrier
+        self.manufacturer_stats = manufacturer_stats
+        self.manufacturer_count = manufacturer_count
+        self.dealer_count = dealer_count
+        
 
     def run(self):
-        # TODO produce the cars, the send them to the dealerships
+        # create cars to send to the dealership
+        manufacturer_count = 0
+        for i in range(self.cars_to_produce):
+            self.sem_dealership.acquire()
+            self.my_lock.acquire()
+            car = Car()
+            self.car_queue.put(car)
 
-        # TODO wait until all of the manufacturers are finished producing cars
+            manufacturer_count += 1
 
-        # TODO "Wake up/signal" the dealerships one more time.
-        # Select one manufacturer to do this (hint: pass in and use the manufacturer_id)
-        pass
+            self.sem_manufacturer.release()
+            self.my_lock.release()
+
+        # this is the count that we keep track of
+        self.manufacturer_stats.append(manufacturer_count)
+
+        # wait until all of the manufacturers are finished producing cars
+        self.barrier.wait()
+
+        # "Wake up/signal" the dealerships one more time.
+        for i in range(self.dealer_count):
+            if self.manufacturer_id == 0:       # only working with one thread so that we don't send multiple
+                self.sem_dealership.acquire()
+                self.my_lock.acquire()
+                self.car_queue.put(None)    # send None to the queue for the dealership to handle
+                self.my_lock.release()
+                self.sem_manufacturer.release()
+                self.sem_dealership.release()
 
 
 class Dealership(threading.Thread):
     """ This is a dealer that receives cars """
 
-    def __init__(self):
-        pass
+    def __init__(self, dealership_id, sem_dealership, sem_manufacturer, car_queue, my_lock, barrier, dealer_stats, manufacturer_count, dealer_count):
+        threading.Thread.__init__(self)
+
+        self.dealership_id = dealership_id
+        self.sem_dealership = sem_dealership
+        self.sem_manufacturer = sem_manufacturer
+        self.car_queue = car_queue
+        self.my_lock = my_lock
+        self.barrier = barrier
+        self.dealer_stats = dealer_stats
+        self.manufacturer_count = manufacturer_count
+        self.dealer_count = dealer_count
+        
+
 
     def run(self):
-        while True:
-            # TODO handle a car
 
-            # Sleep a little - don't change.  This is the last line of the loop
-            time.sleep(random.random() / (SLEEP_REDUCE_FACTOR))
+        dealer_count = 0
+        while True:
+
+            self.sem_manufacturer.acquire()
+
+            self.my_lock.acquire()
+            
+            if self.car_queue.items[0] != None:
+                self.car_queue.get()
+                dealer_count += 1   # add to the counter
+
+                self.sem_dealership.release()
+                self.my_lock.release()
+
+                time.sleep(random.random() / (SLEEP_REDUCE_FACTOR))
+
+            else:
+                # when we get None in our queue, we proceed with these
+                self.sem_dealership.release()
+                self.my_lock.release()
+
+                self.dealer_stats.append(dealer_count)   # add the final counts to the list
+                self.barrier.wait()     # wait for remaining threads
+                break
+            
+
+                # Sleep a little - don't change.  This is the last line of the loop
+                time.sleep(random.random() / (SLEEP_REDUCE_FACTOR))
 
 
 def run_production(manufacturer_count, dealer_count):
@@ -121,23 +181,47 @@ def run_production(manufacturer_count, dealer_count):
     # Start a timer
     begin_time = time.perf_counter()
 
-    # TODO Create semaphore(s)
-    # TODO Create queue
-    # TODO Create lock(s)
-    # TODO Create barrier(s)
+    # Create semaphore(s)
+    sem_dealership = threading.Semaphore(MAX_QUEUE_SIZE)
+    sem_manufacturer = threading.Semaphore(0)
+
+    # Create queue
+    car_queue = QueueTwoFiftyOne()
+
+    # Create lock(s)
+    my_lock = threading.Lock()
+    the_lock = threading.Lock()
+
+    # Create barrier(s)
+    manufact_barrier = threading.Barrier(manufacturer_count)
+    dealer_barrier = threading.Barrier(dealer_count)
 
     # This is used to track the number of cars receives by each dealer
     dealer_stats = list([0] * dealer_count)
+    manufacturer_stats = list([0] * manufacturer_count)
 
-    # TODO create your manufacturers, each manufacturer will create CARS_TO_CREATE_PER_MANUFACTURER
+    manufacturer_threads = []
+    for i in range(manufacturer_count):
+        manufacturer_id = i
+        i = Manufacturer(manufacturer_id, sem_dealership, sem_manufacturer, car_queue, my_lock, manufact_barrier, manufacturer_stats, manufacturer_count, dealer_count)
+        manufacturer_threads.append(i)
 
-    # TODO create your dealerships
+    dealership_threads = []
+    for i in range(dealer_count):
+        dealership_id = i
+        i = Dealership(dealership_id, sem_dealership, sem_manufacturer, car_queue, the_lock, dealer_barrier, dealer_stats, manufacturer_count, dealer_count)
+        dealership_threads.append(i)
 
-    # TODO Start all dealerships
+    for i in dealership_threads:
+        i.start()
 
-    # TODO Start all manufacturers
+    for i in manufacturer_threads:
+        i.start()
 
-    # TODO Wait for manufacturers and dealerships to complete
+    for i in manufacturer_threads:
+        i.join()
+    for i in dealership_threads:
+        i.join()
 
     run_time = time.perf_counter() - begin_time
 
@@ -150,10 +234,7 @@ def run_production(manufacturer_count, dealer_count):
 def main():
     """ Main function """
 
-    # Use 1, 1 to get your code working like the previous assignment, then
-    # try adding in different run amounts. You should be able to run the
-    # full 7 run amounts.
-    #runs = [(1, 1)]
+    #runs = [(2, 2)]
     runs = [(1, 1), (1, 2), (2, 1), (2, 2), (2, 5), (5, 2), (10, 10)]
     for manufacturers, dealerships in runs:
         run_time, max_queue_size, dealer_stats, manufacturer_stats = run_production(
@@ -167,7 +248,6 @@ def main():
         print(f'Dealer Stats        : {dealer_stats}')
         print('')
 
-        # The number of cars produces needs to match the cars sold (this should pass)
         assert sum(dealer_stats) == sum(manufacturer_stats)
 
 

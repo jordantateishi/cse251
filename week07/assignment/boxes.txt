@@ -1,0 +1,142 @@
+Created - 2023-06-10 16:28:30.504603: Large marble: Hercules, marbles: Sheen Green, Lavender Purple, Middle Green, Lemon Lime, Neon Silver, Neon Silver, Mode Beige
+Created - 2023-06-10 16:28:30.504603: Large marble: Hercules, marbles: Lavender Purple, Pale Goldenrod, Candy Pink, Neon Dark Green, Maximum Violet, Chinese Red, Neon Silver
+Created - 2023-06-10 16:28:30.504603: Large marble: Hercules, marbles: Royal Blue, Purple, Beaver, Neon Dark Green, Terra Cotta, Mulberry, Orange Soda
+Created - 2023-06-10 16:28:30.504603: Large marble: The Boss, marbles: Bistre Brown, Pastel Blue, Neon Dark Green, Mango Tango, Mulberry, Ruby, Pale Taupe
+Created - 2023-06-10 16:28:30.504603: Large marble: Spinner, marbles: Arylide Yellow, Royal Red, Lumber, Isabelline, Zomp, Russian Violet, Mulberry
+Created - 2023-06-10 16:28:30.504603: Large marble: Winner, marbles: Lavender Blue, Beaver, Light Orange, Neon Pink, Black Coral, Russian Violet, Neon Dark Green
+Created - 2023-06-10 16:28:30.504603: Large marble: Lucky, marbles: Mimi Pink, Cobalt Blue, Liver Chestnut, Emerald, La Salle Green, Royal Orange, Chinese Red
+Created - 2023-06-10 16:28:30.504603: Large marble: 5-Star, marbles: Royal Red, Tuscan Brown, Orange Peel, Thulian Pink, Mode Beige, Lumber, Chinese Red
+Created - 2023-06-10 16:28:30.504603: Large marble: Winner, marbles: Lilac Luster, Zomp, Almond, Duke Blue, Neon Dark Green, Pale Cerulean, Auburn
+Created - 2023-06-10 16:28:30.505603: Large marble: Lucky, marbles: Icterine, Cobalt Blue, Venetian Red, Pale Goldenrod, Lumber, Gold, Blue Bell
+Created - 2023-06-10 16:28:30.505603: Large marble: 5-Star, marbles: Middle Green, Mango Tango, Silver Chalice, Middle Red Purple, Pale Goldenrod, Mango Tango, Emerald
+Created - 2023-06-10 16:28:30.505603: Large marble: Zeus, marbles: Antique Brass, Granny Smith Apple, Blue, Brown, Liver Chestnut, Pastel Blue, Spanish Orange
+Created - 2023-06-10 16:28:30.505603: Large marble: Zeus, marbles: Granny Smith Apple, Liver Chestnut, Terra Cotta, Liver Chestnut, Pale Plum, Honeydew, Orange Soda
+Created - 2023-06-10 16:28:30.505603: Large marble: Winner, marbles: Duke Blue, Dark Moss Green, Royal Orange, Pale Goldenrod, Orange Soda, Zomp, Silver Chalice
+Created - 2023-06-10 16:28:30.505603: Large marble: Sure Shot, marbles: Spanish Carmine, Zomp, Antique Brass, Neon Pink, Rose Dust, Dark Moss Green, Emerald
+Created - 2023-06-10 16:28:30.505603: Large marble: Lucky, marbles: Purple, Golden Yellow, Neon Silver, Silver Pink, Orange Soda, Spanish Pink, Maximum Violet
+Created - 2023-06-10 16:28:30.505603: Large marble: Winner, marbles: Sheen Green, Icterine, Mimi Pink, Antique Bronze, Light Orchid, Spanish Carmine, Icterine
+Created - 2023-06-10 16:28:30.505603: Large marble: 5-Star, marbles: Orange Soda, Antique Brass, Purple, Maximum Blue, Isabelline, Pale Taupe, Safety Yellow
+Created - 2023-06-10 16:28:30.505603: Large marble: 5-Star, marbles: Duke Blue, Isabelline, Silver Pink, Brown, Mimi Pink, Russian Violet, Maximum Purple
+Created - 2023-06-10 16:28:30.505603: Large marble: Winner, marbles: Orange Peel, White Smoke, Light Orange, Light Orange, Bistre Brown, Orange Soda, Spanish Orange
+Created - 2023-06-10 16:28:30.505603: Large marble: Lucky, marbles: Silver Chalice, Granny Smith Apple, Duke Blue, Venetian Red, Zomp, Maximum Purple, Mimi Pink
+Created - 2023-06-10 16:28:30.505603: Large marble: Lucky, marbles: Pale Plum, Maximum Violet, La Salle Green, Bistre Brown, Golden Yellow, Antique Brass, Vegas Gold
+Created - 2023-06-10 16:28:30.505603: Large marble: 5-Star, marbles: La Salle Green, Ruby, Venetian Red, Thulian Pink, Blue, Auburn, Maximum Blue
+Created - 2023-06-10 16:28:30.505603: Large marble: Lucky, marbles: Maximum Violet, Brink Pink, Venetian Red, Granny Smith Apple, Emerald, Honeydew, Orange Soda
+Created - 2023-06-10 16:28:30.506602: Large marble: Hercules, marbles: Royal Orange, Thulian Pink, Brown, Isabelline, Sage, Lemon Lime, Dark Moss Green
+Created - 2023-06-10 16:28:30.506602: Large marble: Sure Shot, marbles: Granny Smith Apple, Royal Orange, Brink Pink, Zomp, Venetian Red, Mimi Pink, Stop Red
+Created - 2023-06-10 16:28:30.506602: Large marble: Spinner, marbles: Lavender Blue, Ivory, Black Coral, Neon Dark Green, Vegas Gold, Lilac Luster, Lilac Luster
+Created - 2023-06-10 16:28:30.506602: Large marble: Zeus, marbles: Royal Blue, Antique Bronze, Isabelline, Cobalt Blue, Orange Soda, Blue Bell, Candy Pink
+Created - 2023-06-10 16:28:30.506602: Large marble: Sure Shot, marbles: Granny Smith Apple, Honeydew, Maximum Violet, Silver Chalice, Stop Red, Outrageous Orange, Russian Violet
+Created - 2023-06-10 16:28:30.506602: Large marble: Zeus, marbles: Middle Green, Dark Fuchsia, Neon Pink, Middle Green Yellow, Outrageous Orange, Orange Soda, Cotton Candy
+Created - 2023-06-10 16:28:30.506602: Large marble: The Boss, marbles: Maximum Blue, Mint Green, Liver Chestnut, Gold, Neon Silver, Silver Chalice, Blue Bell
+Created - 2023-06-10 16:28:30.506602: Large marble: Apollo, marbles: Pastel Blue, Blue Bell, Duke Blue, Thulian Pink, Blue, Chinese Red, Silver Chalice
+Created - 2023-06-10 16:28:30.506602: Large marble: Spinner, marbles: Royal Orange, Light Orange, Golden Yellow, Purple, Icterine, Sage, Blue Bell
+Created - 2023-06-10 16:28:30.506602: Large marble: Spinner, marbles: Pale Goldenrod, Tuscan Brown, Lemon Lime, Black Coral, Purple Plum, Slate Blue, Russian Green
+Created - 2023-06-10 16:28:30.506602: Large marble: The Boss, marbles: Mimi Pink, Blue-Green, Pale Cerulean, Candy Pink, Mango Tango, Lemon Lime, Fiery Rose
+Created - 2023-06-10 16:28:30.506602: Large marble: The Boss, marbles: Honeydew, Spanish Carmine, Candy Pink, Lilac Luster, Russian Violet, Bistre Brown, Lavender Purple
+Created - 2023-06-10 16:28:30.506602: Large marble: The Boss, marbles: Maximum Blue, Purple, Maximum Blue, Mode Beige, Liver Chestnut, Blue Bell, White Smoke
+Created - 2023-06-10 16:28:30.506602: Large marble: 5-Star, marbles: Beaver, Russian Violet, Cotton Candy, Spanish Pink, Dark Moss Green, Dark Fuchsia, Maximum Violet
+Created - 2023-06-10 16:28:30.506602: Large marble: Spinner, marbles: Mango Tango, Tuscan Brown, Icterine, Orange Soda, Orange Soda, Thulian Pink, La Salle Green
+Created - 2023-06-10 16:28:30.506602: Large marble: The Boss, marbles: Pale Cerulean, Pale Taupe, Orange Soda, Purple Plum, Maximum Violet, Pale Goldenrod, Green
+Created - 2023-06-10 16:28:30.506602: Large marble: Hercules, marbles: Gold, Mode Beige, Maximum Violet, Russian Violet, Antique Bronze, Silver Chalice, Shandy
+Created - 2023-06-10 16:28:30.506602: Large marble: Spinner, marbles: Neon Pink, Stop Red, Spanish Orange, Lumber, Arylide Yellow, Middle Green Yellow, Silver Pink
+Created - 2023-06-10 16:28:30.506602: Large marble: Apollo, marbles: Spanish Pink, Isabelline, Outrageous Orange, Spanish Orange, Zomp, Bistre Brown, Light Orange
+Created - 2023-06-10 16:28:30.506602: Large marble: Apollo, marbles: Pastel Gray, Black Coral, Rose Quartz, Silver Pink, White Smoke, Tuscan Brown, Mint Green
+Created - 2023-06-10 16:28:30.506602: Large marble: Hercules, marbles: Platinum, Pastel Gray, Middle Red Purple, Almond, Black Coral, Duke Blue, Venetian Red
+Created - 2023-06-10 16:28:30.506602: Large marble: Zeus, marbles: Russian Green, Emerald, Emerald, Spanish Orange, Middle Red Purple, Maximum Purple, Sage
+Created - 2023-06-10 16:28:30.506602: Large marble: 5-Star, marbles: Emerald, Silver Chalice, White Smoke, Silver Chalice, Spanish Carmine, Blue, Royal Blue
+Created - 2023-06-10 16:28:30.506602: Large marble: Lucky, marbles: Blue-Green, Neon Pink, Fiery Rose, Terra Cotta, Honeydew, Mulberry, Black Coral
+Created - 2023-06-10 16:28:30.506602: Large marble: Hercules, marbles: Mulberry, Gold, Russian Green, Orange Peel, Dark Moss Green, Icterine, Russian Violet
+Created - 2023-06-10 16:28:30.507602: Large marble: The Boss, marbles: Pale Cerulean, Stop Red, Spanish Pink, Mango Tango, Maximum Purple, Maximum Purple, Venetian Red
+Created - 2023-06-10 16:28:30.507602: Large marble: The Boss, marbles: Emerald, Neon Silver, White Smoke, Neon Pink, Orange Soda, Mint Green, Sage
+Created - 2023-06-10 16:28:30.507602: Large marble: Winner, marbles: Light Orchid, Silver Pink, Shandy, Auburn, Safety Yellow, White Smoke, Cotton Candy
+Created - 2023-06-10 16:28:30.507602: Large marble: Apollo, marbles: Mint Cream, Beaver, Eerie Black, Duke Blue, Middle Green, Stop Red, Terra Cotta
+Created - 2023-06-10 16:28:30.507602: Large marble: Lucky, marbles: Orange Soda, Cotton Candy, Neon Pink, Bistre Brown, Venetian Red, Rose Quartz, Spanish Carmine
+Created - 2023-06-10 16:28:30.507602: Large marble: Apollo, marbles: Rose Dust, Emerald, Russian Green, Sheen Green, Lavender Purple, Mode Beige, Chinese Red
+Created - 2023-06-10 16:28:30.507602: Large marble: Apollo, marbles: Pastel Blue, Orange Soda, Spanish Orange, Purple, Lumber, Blue Bell, Slate Blue
+Created - 2023-06-10 16:28:30.507602: Large marble: Winner, marbles: Brown, Ivory, Pastel Gray, Platinum, Cobalt Blue, Purple Plum, Royal Orange
+Created - 2023-06-10 16:28:30.507602: Large marble: Lucky, marbles: Shandy, Terra Cotta, Lavender Blue, Lavender Blue, Royal Red, Silver Pink, Blue
+Created - 2023-06-10 16:28:30.507602: Large marble: Spinner, marbles: Purple Plum, Purple, Fiery Rose, Safety Yellow, Fiery Rose, Safety Yellow, Arylide Yellow
+Created - 2023-06-10 16:28:30.507602: Large marble: Lucky, marbles: Green, Indigo, Royal Orange, Granny Smith Apple, Mimi Pink, Eerie Black, Neon Dark Green
+Created - 2023-06-10 16:28:30.507602: Large marble: 5-Star, marbles: Thulian Pink, Lemon Lime, Light Orchid, Lavender Blue, Thulian Pink, Ruby, Royal Red
+Created - 2023-06-10 16:28:30.507602: Large marble: Spinner, marbles: Pale Plum, Black Coral, Honeydew, Big Dip O’ruby, Bistre Brown, Middle Green, Spanish Orange
+Created - 2023-06-10 16:28:30.507602: Large marble: Hercules, marbles: Stop Red, Maximum Blue, Ruby, Silver Chalice, Blue-Green, Fiery Rose, Blue
+Created - 2023-06-10 16:28:30.507602: Large marble: Lucky, marbles: Gold, Tuscan Brown, Royal Blue, Candy Pink, Sheen Green, Bistre Brown, Silver Pink
+Created - 2023-06-10 16:28:30.507602: Large marble: The Boss, marbles: Royal Red, Blue-Green, Beaver, Tuscan Brown, Pale Cerulean, Orange Soda, Eerie Black
+Created - 2023-06-10 16:28:30.507602: Large marble: 5-Star, marbles: Icterine, Beaver, Brink Pink, Light Orchid, Royal Orange, Middle Red Purple, Bistre Brown
+Created - 2023-06-10 16:28:30.507602: Large marble: The Boss, marbles: Cotton Candy, Rose Dust, Almond, Brown, Purple, Eerie Black, Rose Dust
+Created - 2023-06-10 16:28:30.507602: Large marble: Lucky, marbles: Liver Chestnut, Purple Plum, Gold, Lemon Lime, Platinum, Terra Cotta, Lumber
+Created - 2023-06-10 16:28:30.507602: Large marble: Winner, marbles: Royal Orange, Purple Plum, Pastel Gray, Lavender Purple, Royal Orange, Pale Plum, Pastel Gray
+Created - 2023-06-10 16:28:30.507602: Large marble: Winner, marbles: Black Coral, Middle Red Purple, Gold, Eerie Black, Outrageous Orange, Stop Red, Emerald
+Created - 2023-06-10 16:28:30.507602: Large marble: Hercules, marbles: Vegas Gold, Zomp, Antique Bronze, Liver Chestnut, Venetian Red, Duke Blue, Mimi Pink
+Created - 2023-06-10 16:28:30.507602: Large marble: Winner, marbles: Outrageous Orange, Pale Plum, Blue Bell, Lilac Luster, Platinum, Safety Yellow, Mulberry
+Created - 2023-06-10 16:28:30.507602: Large marble: Hercules, marbles: Sheen Green, Orange Peel, La Salle Green, Maximum Violet, Isabelline, Ruby, Eerie Black
+Created - 2023-06-10 16:28:30.508601: Large marble: Spinner, marbles: Middle Green Yellow, Maximum Purple, Icterine, Tuscan Brown, Arylide Yellow, Lilac Luster, Rose Quartz
+Created - 2023-06-10 16:28:30.508601: Large marble: Lucky, marbles: Blue-Green, Fiery Rose, Green, Vegas Gold, Lavender Blue, Lilac Luster, Black Coral
+Created - 2023-06-10 16:28:30.508601: Large marble: Sure Shot, marbles: Light Orange, Auburn, Silver Chalice, Vegas Gold, Platinum, Light Orange, Gold
+Created - 2023-06-10 16:28:30.508601: Large marble: Lucky, marbles: Sheen Green, Emerald, Blue, Lavender Blue, Lilac Luster, Mulberry, Vegas Gold
+Created - 2023-06-10 16:28:30.508601: Large marble: Winner, marbles: Chinese Red, Pale Goldenrod, Antique Bronze, Almond, Auburn, Black Coral, Safety Yellow
+Created - 2023-06-10 16:28:30.508601: Large marble: Apollo, marbles: Icterine, Lilac Luster, Light Orchid, Spanish Pink, Pale Goldenrod, Lumber, Lumber
+Created - 2023-06-10 16:28:30.508601: Large marble: Zeus, marbles: Beaver, Royal Blue, Pastel Blue, Fiery Rose, Fiery Rose, Lavender Purple, Mode Beige
+Created - 2023-06-10 16:28:30.508601: Large marble: The Boss, marbles: Platinum, Neon Pink, Brown, Dark Fuchsia, Blue-Green, Outrageous Orange, Blue-Green
+Created - 2023-06-10 16:28:30.508601: Large marble: Spinner, marbles: Mint Green, Pastel Gray, Maximum Blue, Thulian Pink, Mint Green, Mimi Pink, Maximum Blue
+Created - 2023-06-10 16:28:30.508601: Large marble: Winner, marbles: Big Dip O’ruby, Fiery Rose, Thulian Pink, Orange Peel, Mulberry, Green, Purple Plum
+Created - 2023-06-10 16:28:30.508601: Large marble: Zeus, marbles: Pale Cerulean, Green, Lilac Luster, Candy Pink, Icterine, Mimi Pink, Blue-Green
+Created - 2023-06-10 16:28:30.508601: Large marble: Apollo, marbles: Light Orchid, White Smoke, Terra Cotta, Indigo, Granny Smith Apple, Vegas Gold, Royal Red
+Created - 2023-06-10 16:28:30.508601: Large marble: The Boss, marbles: Lilac Luster, Neon Silver, Mango Tango, Ivory, Light Orange, Orange Peel, Spanish Carmine
+Created - 2023-06-10 16:28:30.508601: Large marble: Spinner, marbles: Light Orchid, Zomp, Middle Red Purple, Fiery Rose, Mode Beige, Neon Pink, Rose Quartz
+Created - 2023-06-10 16:28:30.508601: Large marble: Apollo, marbles: Neon Pink, Duke Blue, Middle Red Purple, Arylide Yellow, Outrageous Orange, La Salle Green, Lavender Purple
+Created - 2023-06-10 16:28:30.508601: Large marble: Zeus, marbles: Rose Quartz, Bistre Brown, Antique Brass, Lemon Lime, Rose Quartz, Green, Dark Moss Green
+Created - 2023-06-10 16:28:30.508601: Large marble: Hercules, marbles: Pastel Blue, Pale Cerulean, Neon Silver, Spanish Orange, Thulian Pink, Blue Bell, Duke Blue
+Created - 2023-06-10 16:28:30.508601: Large marble: Apollo, marbles: Spanish Carmine, Antique Bronze, Spanish Carmine, Granny Smith Apple, Royal Orange, Middle Green, Orange Soda
+Created - 2023-06-10 16:28:30.508601: Large marble: 5-Star, marbles: Spanish Carmine, Brown, Dark Moss Green, Mint Cream, Mango Tango, Lilac Luster, Middle Green
+Created - 2023-06-10 16:28:30.508601: Large marble: Apollo, marbles: Brink Pink, Blue, Isabelline, Russian Green, Royal Blue, Safety Yellow, Spanish Orange
+Created - 2023-06-10 16:28:30.508601: Large marble: Apollo, marbles: Spanish Orange, Light Orchid, Liver Chestnut, Almond, Gold, Orange Soda, Vegas Gold
+Created - 2023-06-10 16:28:30.508601: Large marble: Lucky, marbles: Spanish Carmine, Spanish Orange, Lavender Purple, Mode Beige, Thulian Pink, Indigo, Neon Pink
+Created - 2023-06-10 16:28:30.508601: Large marble: Spinner, marbles: Russian Violet, Mango Tango, Brink Pink, Mimi Pink, Safety Yellow, Blue Bell, Duke Blue
+Created - 2023-06-10 16:28:30.508601: Large marble: The Boss, marbles: Chinese Red, Lavender Purple, Brown, Dark Moss Green, Spanish Carmine, Honeydew, Orange Soda
+Created - 2023-06-10 16:28:30.508601: Large marble: Zeus, marbles: Shandy, Thulian Pink, Russian Violet, Mode Beige, Rose Quartz, Safety Yellow, Chinese Red
+Created - 2023-06-10 16:28:30.508601: Large marble: Apollo, marbles: Golden Yellow, Pale Cerulean, Mint Cream, Almond, Pale Cerulean, Liver Chestnut, Outrageous Orange
+Created - 2023-06-10 16:28:30.508601: Large marble: Sure Shot, marbles: Rose Dust, Auburn, Russian Violet, Middle Green Yellow, Royal Red, Middle Green, Emerald
+Created - 2023-06-10 16:28:30.508601: Large marble: Spinner, marbles: Light Orange, Liver Chestnut, Gold, Blue, Purple, Antique Brass, Tuscan Brown
+Created - 2023-06-10 16:28:30.509601: Large marble: Lucky, marbles: Neon Dark Green, Royal Blue, Mint Green, Pale Taupe, Royal Blue, Lumber, White Smoke
+Created - 2023-06-10 16:28:30.509601: Large marble: Lucky, marbles: Brink Pink, Middle Red Purple, Silver Pink, Vegas Gold, Rose Quartz, Ivory, Mint Green
+Created - 2023-06-10 16:28:30.509601: Large marble: The Boss, marbles: Russian Violet, Rose Quartz, Middle Red Purple, Lumber, Tuscan Brown, Middle Red Purple, Middle Green Yellow
+Created - 2023-06-10 16:28:30.509601: Large marble: Lucky, marbles: Icterine, Emerald, Mulberry, Zomp, Antique Bronze, White Smoke, Ruby
+Created - 2023-06-10 16:28:30.509601: Large marble: Spinner, marbles: Emerald, Icterine, Cobalt Blue, Lumber, Neon Silver, Auburn, Beaver
+Created - 2023-06-10 16:28:30.509601: Large marble: Apollo, marbles: Orange Soda, Spanish Orange, Ruby, Spanish Orange, Royal Red, Mimi Pink, Rose Quartz
+Created - 2023-06-10 16:28:30.509601: Large marble: Hercules, marbles: Chinese Red, Pale Goldenrod, Brown, Fiery Rose, Chinese Red, Dark Fuchsia, Cotton Candy
+Created - 2023-06-10 16:28:30.509601: Large marble: Sure Shot, marbles: Pale Plum, Lumber, Brown, Indigo, Rose Dust, Neon Silver, Mulberry
+Created - 2023-06-10 16:28:30.509601: Large marble: Lucky, marbles: Sheen Green, Liver Chestnut, Neon Silver, Purple Plum, Lavender Blue, Safety Yellow, Neon Dark Green
+Created - 2023-06-10 16:28:30.509601: Large marble: Apollo, marbles: Tuscan Brown, Isabelline, Granny Smith Apple, Mulberry, Middle Green, Blue-Green, Duke Blue
+Created - 2023-06-10 16:28:30.509601: Large marble: 5-Star, marbles: Mint Green, Lavender Purple, Antique Brass, Light Orange, Lemon Lime, Tuscan Brown, Middle Green
+Created - 2023-06-10 16:28:30.509601: Large marble: Zeus, marbles: Bistre Brown, Brink Pink, Orange Peel, Auburn, Spanish Pink, Ivory, Antique Bronze
+Created - 2023-06-10 16:28:30.509601: Large marble: 5-Star, marbles: Liver Chestnut, Maximum Violet, Neon Pink, Mulberry, Orange Peel, Silver Chalice, Terra Cotta
+Created - 2023-06-10 16:28:30.509601: Large marble: Spinner, marbles: Purple, Mulberry, Pale Cerulean, Neon Dark Green, Royal Blue, Ruby, Lavender Purple
+Created - 2023-06-10 16:28:30.509601: Large marble: Zeus, marbles: Tuscan Brown, Spanish Pink, Cobalt Blue, Almond, Royal Red, Mode Beige, Blue
+Created - 2023-06-10 16:28:30.509601: Large marble: The Boss, marbles: Russian Violet, Royal Blue, Orange Peel, Antique Brass, Almond, Purple Plum, Pale Plum
+Created - 2023-06-10 16:28:30.509601: Large marble: Sure Shot, marbles: Eerie Black, Orange Soda, Dark Fuchsia, Lilac Luster, Green, Spanish Pink, Auburn
+Created - 2023-06-10 16:28:30.509601: Large marble: Hercules, marbles: Maximum Violet, Eerie Black, Fiery Rose, Middle Green Yellow, Dark Fuchsia, Blue Bell, Honeydew
+Created - 2023-06-10 16:28:30.509601: Large marble: Spinner, marbles: Arylide Yellow, Vegas Gold, Emerald, Light Orchid, Orange Peel, Eerie Black, Blue-Green
+Created - 2023-06-10 16:28:30.509601: Large marble: Winner, marbles: Lilac Luster, Mimi Pink, Tuscan Brown, Brown, Safety Yellow, Silver Pink, Antique Bronze
+Created - 2023-06-10 16:28:30.509601: Large marble: Hercules, marbles: Fiery Rose, La Salle Green, Isabelline, Mint Cream, Cotton Candy, Venetian Red, Tuscan Brown
+Created - 2023-06-10 16:28:30.509601: Large marble: Lucky, marbles: Lilac Luster, Stop Red, Shandy, Big Dip O’ruby, Neon Pink, Sheen Green, Ivory
+Created - 2023-06-10 16:28:30.509601: Large marble: Sure Shot, marbles: Neon Dark Green, Light Orchid, Emerald, Honeydew, Orange Peel, Dark Moss Green, Middle Green
+Created - 2023-06-10 16:28:30.509601: Large marble: The Boss, marbles: Venetian Red, Dark Moss Green, Neon Silver, Gold, Pale Cerulean, Tuscan Brown, Gold
+Created - 2023-06-10 16:28:30.510602: Large marble: Lucky, marbles: Vegas Gold, Gold, White Smoke, Indigo, Blue Bell, Honeydew, Stop Red
+Created - 2023-06-10 16:28:30.510602: Large marble: Lucky, marbles: Venetian Red, Pastel Blue, Ruby, Emerald, Mint Cream, Orange Soda, Mulberry
+Created - 2023-06-10 16:28:30.510602: Large marble: Hercules, marbles: Purple Plum, Pale Cerulean, Pale Goldenrod, Sage, Green, Rose Dust, Silver Pink
+Created - 2023-06-10 16:28:30.510602: Large marble: Apollo, marbles: Middle Green, Pastel Gray, Middle Red Purple, La Salle Green, Orange Peel, Sheen Green, Middle Red Purple
+Created - 2023-06-10 16:28:30.510602: Large marble: Winner, marbles: Green, Brink Pink, Middle Green, Green, Brink Pink, Mint Green, Pale Plum
+Created - 2023-06-10 16:28:30.510602: Large marble: Winner, marbles: Indigo, Light Orange, White Smoke, Pale Plum, Orange Soda, Honeydew, Orange Peel
+Created - 2023-06-10 16:28:30.510602: Large marble: Lucky, marbles: La Salle Green, White Smoke, Mimi Pink, Lumber, Silver Chalice, Lavender Purple, Maximum Purple
+Created - 2023-06-10 16:28:30.510602: Large marble: 5-Star, marbles: Middle Red Purple, Spanish Carmine, Pastel Blue, Emerald, Eerie Black, Pale Cerulean, Mango Tango
+Created - 2023-06-10 16:28:30.510602: Large marble: 5-Star, marbles: Dark Fuchsia, Vegas Gold, Gold, Venetian Red, Lemon Lime, Mango Tango, Ivory
+Created - 2023-06-10 16:28:30.510602: Large marble: Sure Shot, marbles: Icterine, Lumber, Venetian Red, Purple Plum, Middle Green Yellow, Antique Bronze, Neon Pink
+Created - 2023-06-10 16:28:30.510602: Large marble: The Boss, marbles: Granny Smith Apple, Cobalt Blue, Pale Goldenrod, Bistre Brown, Lavender Purple, Tuscan Brown, Brink Pink
+Created - 2023-06-10 16:28:30.510602: Large marble: Spinner, marbles: Lumber, Silver Pink, Neon Pink, Chinese Red, Black Coral, Granny Smith Apple, Brown
+Created - 2023-06-10 16:28:30.510602: Large marble: Winner, marbles: Golden Yellow, Silver Chalice, Russian Green, Outrageous Orange, Mango Tango, Orange Soda, Lumber
+Created - 2023-06-10 16:28:30.510602: Large marble: Zeus, marbles: Rose Dust, Eerie Black, Pale Goldenrod, Maximum Blue, Neon Silver, Dark Moss Green, Mint Cream
+Created - 2023-06-10 16:28:30.510602: Large marble: Apollo, marbles: Middle Green, Maximum Purple, Eerie Black, Blue, Rose Quartz, Silver Pink, Russian Green
+Created - 2023-06-10 16:28:30.510602: Large marble: 5-Star, marbles: Pale Taupe, Beaver, Safety Yellow, Arylide Yellow, Mint Cream, Almond, Ivory
+Created - 2023-06-10 16:28:30.510602: Large marble: 5-Star, marbles: Zomp, Rose Dust, Mode Beige, Orange Soda, Sage, Brown, Pastel Gray

@@ -13,19 +13,45 @@ SCREEN_SIZE = 800
 COLOR = (0, 0, 255)
 
 
-# TODO add any functions
+def path(maze, solution_path, row, col, color):
+    # Check if we have reached the end of the maze using the function from the Maze class
+    if maze.at_end(row, col):
+        return True
+    
+    # Use the function from Maze to put all possible moves into a list
+    moves = maze.get_possible_moves(row, col)
+
+    # go through each of the row/column pairs in the list of moves
+    for r, c in moves:
+        # if it is a possible move, then we move and append it to the solution_path
+        if maze.can_move_here(r, c):
+            maze.move(r, c, color)
+            solution_path.append((r,c))
+
+            # if it reaches the end, then we return True
+            if path(maze, solution_path, r, c, color):
+                return True
+            
+            # else we use the restore function to show that we have been there and get rid of this chosen path
+            maze.restore(r,c)
+            solution_path.remove((r,c))
 
 def solve(maze):
     """ Solve the maze. The path object should be a list (x, y) of the positions 
         that solves the maze, from the start position to the end position. """
 
-    # TODO add code here
     solution_path = [] 
+
+    position = maze.get_start_pos() # start position returns a pair (row, col)
+    row = position[0]
+    col = position[1]
     
-    # Remember that an object is passed by reference, so you can pass in the 
-    # solution_path object, modify it, and you won't need to return it from 
-    # your recursion function
-    
+    maze.move(row, col, COLOR)  # change the color of the start position square
+    solution_path.append((row,col)) # add it to the solution path since it always has to start here
+
+    # use the recursive function created to find the solution_path
+    path(maze, solution_path, row, col, COLOR)
+
     return solution_path
 
 
